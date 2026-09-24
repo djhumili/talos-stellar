@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "feat/sdk-typed-seller-quote-588",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "feat/sdk-typed-seller-quote-588": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "feat/sdk-typed-seller-quote-588",
+    "origin"
+  ]
+}

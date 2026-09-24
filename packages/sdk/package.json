@@ -17,11 +17,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs && npm run build:browser",
-    "build:esm": "tsc -p tsconfig.json",
-    "build:cjs": "tsc -p tsconfig.cjs.json && node scripts/rename-cjs.mjs",
-    "build:browser": "node scripts/bundle-browser.mjs",
-    "dev": "tsc --watch",
+    "build": "node init && npm run build:esm && npm run build:cjs && npm run build:browser",
+    "build:esm": "node init && tsc -p tsconfig.json",
+    "build:cjs": "node init && tsc -p tsconfig.cjs.json && node scripts/rename-cjs.mjs",
+    "build:browser": "node init && node scripts/bundle-browser.mjs",
+    "dev": "node init && tsc --watch",
     "test": "vitest run",
     "generate:types": "openapi-typescript \"../../web/tests/fixtures/openapi.snapshot.json\" -o \"src/generated-types.ts\"",
     "compat:edge": "node scripts/smoke-edge.mjs",
