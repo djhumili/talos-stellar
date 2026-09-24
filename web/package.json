@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack --hostname 0.0.0.0",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev --webpack --hostname 0.0.0.0",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "eslint",
     "test": "vitest run",
     "test:unit": "vitest run tests/health.test.ts tests/*.unit.test.ts tests/sse.test.ts",
